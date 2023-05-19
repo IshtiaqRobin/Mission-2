@@ -21,10 +21,11 @@ export const getUsers = async (
     res: Response,
     next: NextFunction
 ) => {
-    // const user = await getUsersFromDB(data);
+    const user = getUsersFromDB();
 
     res.status(202).json({
         status: 'success',
+        data: user,
     });
 };
 
